@@ -1,0 +1,6 @@
+@VisiotechSecurityAPI_HostAddress = http://localhost:5227
+
+GET {{VisiotechSecurityAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
