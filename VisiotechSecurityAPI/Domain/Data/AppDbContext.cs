@@ -5,10 +5,12 @@ using VisiotechSecurityAPI.Domain.Entity;
 
 namespace VisiotechSecurityAPI.Domain.Data
 {
+    // context para conectar con la base de datos
     public class AppDbContext : DbContext
     {
-
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
+     
+        // Declaramos las diferentes entidades 
         public DbSet<Manager> Managers { get; set; }
         public DbSet<Parcel> Parcels { get; set; }
         public DbSet<Vineyard> Vineyards { get; set; }

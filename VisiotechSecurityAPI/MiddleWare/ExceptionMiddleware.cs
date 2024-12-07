@@ -1,7 +1,7 @@
 ﻿using System.Net;
 using System.Text.Json;
 
-// la unica funcion de este midleware es envolver todos las solicitudes en un try para no repetirlas continuamente con todo el codigo.
+// la funcion de este midleware es envolver todas las solicitudes en un try. Esto nos evitar colocar try catch en cada uno delos endpoints
 public class ExceptionMiddleware
 {
     private readonly RequestDelegate _next;
@@ -25,6 +25,7 @@ public class ExceptionMiddleware
         }
     }
 
+    // Caso haya alguna excepcion, el tratamiento esta padronizado devolviendo un error 500.
     private static Task HandleExceptionAsync(HttpContext context, Exception exception)
     {
         context.Response.ContentType = "application/json";

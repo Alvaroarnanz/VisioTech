@@ -24,6 +24,7 @@ namespace VisiotechSecurityAPI.Domain.Entity
         public int Area { get; set; }
 
 
+        // relaciones con otras tablas
 
         [ForeignKey("ManagerId")]
         public Manager Manager { get; set; }
