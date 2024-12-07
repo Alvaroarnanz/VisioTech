@@ -18,7 +18,6 @@ namespace VisiotechSecurityAPI.Controllers
         public async Task<ActionResult<Dictionary<string, List<string>>>> GetManagers()
         {
             var VineyardManagers = await _vineyardService.GetVineyardManagersDiccionaryAsync();
-
             return Ok(VineyardManagers);
         }
     }

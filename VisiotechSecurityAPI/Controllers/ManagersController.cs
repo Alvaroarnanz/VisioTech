@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using VisiotechSecurityAPI.Domain.Interfaces;
-using VisiotechSecurityAPI.Services;
 
 namespace VisiotechSecurityAPI.Controllers
 {
@@ -19,7 +18,6 @@ namespace VisiotechSecurityAPI.Controllers
         public async Task<ActionResult<List<int>>> GetManagerIds()
         {
             var managerIds = await _managerService.GetManagerIdsAsync();
-
             return Ok(managerIds);
         }
 
